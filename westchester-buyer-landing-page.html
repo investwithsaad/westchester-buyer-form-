@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westchester County Buyer's Advisor | Saad Tai, Real Broker NY</title>
+<meta name="description" content="Work directly with a Westchester County buyer's advisor. Compare towns, understand taxes and commute tradeoffs, and buy with confidence — whether you're relocating from NYC or already local.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Westchester County Buyer's Advisor | Saad Tai, Real Broker NY">
+<meta property="og:description" content="Compare towns, understand taxes and commute tradeoffs, and buy with confidence in Westchester County — working directly with a dedicated advisor from first call to closing.">
+<meta property="og:image" content="headshot.jpg">
+<meta name="twitter:card" content="summary">
+
+<!-- Structured data — helps search engines understand this as a real estate
+     professional's service page. Update sameAs / areaServed as needed. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Saad Tai",
+  "telephone": "+1-518-348-9535",
+  "image": "headshot.jpg",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Real Broker NY LLC"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Westchester County, NY"
+  },
+  "description": "Westchester County buyer's advisor helping clients compare towns, evaluate schools, taxes, and commute, and buy homes with a dedicated, direct-access approach."
+}
+</script>
+
+<!-- ============================================================
+     TODO — ANALYTICS & CONVERSION TRACKING (required before launch)
+     Insert GA4 and Google Ads tags here, in this order, before </head>.
+
+     1) GA4:
+     <script async src="https://www.googletagmanager.com/gtag/js?id=[INSERT GA4 MEASUREMENT ID]"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', '[INSERT GA4 MEASUREMENT ID]');
+     </script>
+
+     2) Google Ads (same gtag.js load can be shared if IDs match):
+     <script>
+       gtag('config', '[INSERT GOOGLE ADS CONVERSION ID]');
+     </script>
+
+     3) Conversion firing (used later in this file's <script> block):
+     gtag('event', 'conversion', {
+       'send_to': '[INSERT GOOGLE ADS CONVERSION ID]/[INSERT GOOGLE ADS CONVERSION LABEL]'
+     });
+
+     Until these are inserted, pushEvent() below only logs to the console.
+     ============================================================ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --navy:#0D1F3C;
+  --navy-soft:#16294d;
+  --gold:#B8912E;
+  --cream:#F6F3EC;
+  --cream-dim:#EFEAE0;
+  --slate:#4B5563;
+  --slate-light:#7A8494;
+  --sage:#5E7F63;
+  --white:#FFFFFF;
+  --line:#DDD6C8;
+  --radius:2px;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+}
+body{
+  font-family:'IBM Plex Sans', sans-serif;
+  color:var(--navy);
+  background:var(--cream);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit;}
+button{font-family:inherit;}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+.search-option:focus-visible, .radio-pill:has(input:focus-visible){
+  outline:3px solid var(--gold); outline-offset:2px;
+}
+
+/* Accessible honeypot — invisible to sighted users, skipped by screen readers, unreachable by tab */
+.hp-field{position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;}
+
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12.5px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:500;
+}
+h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; color:var(--navy); letter-spacing:-0.01em;}
+h1{font-size:clamp(34px,6vw,58px); line-height:1.05; font-weight:600;}
+h2{font-size:clamp(26px,4vw,38px); line-height:1.12;}
+h3{font-size:20px; line-height:1.25;}
+p{color:var(--slate);}
+.lede{font-size:18px; color:var(--slate); max-width:56ch;}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:16px 28px; border-radius:var(--radius); font-weight:600; font-size:15.5px;
+  border:1.5px solid transparent; cursor:pointer; text-decoration:none;
+  transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  min-height:52px;
+}
+.btn:active{transform:scale(0.98);}
+.btn-primary{background:var(--gold); color:var(--navy);}
+.btn-primary:hover{background:#c9a13a;}
+.btn-secondary{background:transparent; color:var(--white); border-color:rgba(255,255,255,0.45);}
+.btn-secondary:hover{border-color:var(--white);}
+.btn-outline-dark{background:transparent; color:var(--navy); border-color:var(--navy);}
+.btn-outline-dark:hover{background:var(--navy); color:var(--white);}
+.btn-block{width:100%;}
+
+/* NAV */
+header{
+  position:sticky; top:0; z-index:50; background:rgba(246,243,236,0.92);
+  backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1120px; margin:0 auto; gap:12px;}
+.brand{font-family:'Fraunces', serif; font-weight:600; font-size:19px; color:var(--navy); text-decoration:none;}
+.brand span{color:var(--gold);}
+.nav-cta{display:flex; align-items:center; gap:14px;}
+.nav-phone{font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--navy); text-decoration:none; display:none;}
+@media(min-width:640px){.nav-phone{display:inline;}}
+.nav-browse{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:14px; color:var(--navy); text-decoration:none; white-space:nowrap;}
+.nav-browse:hover{color:var(--gold);}
+
+/* HERO */
+.hero{
+  position:relative; background:var(--navy); color:var(--white);
+  padding:64px 0 0; overflow:hidden;
+}
+.hero-inner{max-width:1120px; margin:0 auto; padding:0 24px 56px; position:relative; z-index:2;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{color:var(--white); margin-top:14px;}
+.hero .lede{color:#C9CFDC; margin-top:18px; font-size:19px;}
+.hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;}
+.hero-meta{display:flex; gap:28px; margin-top:32px; flex-wrap:wrap;}
+.hero-meta div{font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9AA5B8;}
+.hero-meta strong{display:block; font-family:'Fraunces',serif; font-size:22px; color:var(--white); font-weight:600;}
+
+.skyline{position:relative; width:100%; height:120px; z-index:1;}
+.skyline svg{width:100%; height:100%; display:block;}
+
+/* Search / Explore section */
+.section{padding:76px 0;}
+.section-head{max-width:640px; margin-bottom:40px;}
+.section-head .eyebrow{color:var(--gold);}
+.section-head h2{margin-top:10px;}
+.section-head p{margin-top:14px;}
+
+/* Unified property search module — one experience, two steps, one CTA */
+.search-module{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:32px;
+}
+.search-module-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+@media(max-width:780px){.search-module-grid{grid-template-columns:1fr; gap:28px;}}
+.search-step-label{
+  font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:6px;
+}
+.search-step h3{margin-bottom:14px; font-size:18px;}
+.search-options{display:flex; flex-wrap:wrap; gap:9px;}
+.search-suboptions{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:10px; padding:10px 12px 10px 14px;
+  background:var(--cream-dim); border-left:2.5px solid var(--gold); border-radius:var(--radius);
+}
+.search-suboptions-label{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--slate-light); text-transform:uppercase; letter-spacing:0.06em; margin-right:2px;}
+.search-option-sub{font-size:12.5px; padding:8px 13px;}
+.search-option[data-group].expanded{border-color:var(--gold); color:var(--gold);}
+.search-option{
+  font-family:'IBM Plex Mono', monospace; font-size:13px; padding:10px 16px;
+  border:1.5px solid var(--navy); border-radius:999px; background:transparent;
+  color:var(--navy); cursor:pointer; transition:background .15s, color .15s, border-color .15s;
+  white-space:nowrap;
+}
+.search-option:hover{border-color:var(--gold);}
+.search-option.selected{background:var(--navy); color:var(--white); border-color:var(--navy);}
+.custom-location-field{margin-top:14px; display:flex; flex-direction:column; gap:6px; max-width:360px;}
+.custom-location-field label{font-size:13px; font-weight:600; color:var(--navy);}
+.custom-location-field input{
+  padding:12px 14px; border:1.5px solid var(--line); border-radius:var(--radius);
+  font-family:'IBM Plex Sans',sans-serif; font-size:16px; background:var(--cream-dim); color:var(--navy);
+}
+.custom-location-field input:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+.search-cta-row{
+  display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  margin-top:28px; padding-top:24px; border-top:1px solid var(--line);
+}
+.search-validation{font-size:13px; color:#B3453D; display:none;}
+.search-validation.show{display:inline;}
+.search-summary{font-size:13.5px; color:var(--slate); font-family:'IBM Plex Mono',monospace;}
+.search-hint-static{font-size:12.5px; color:var(--slate-light); margin-top:8px;}
+.idx-note{margin-top:18px; font-size:13.5px; color:var(--slate-light); max-width:60ch;}
+.idx-inline-warning{
+  display:none; background:#FBEEEC; border:1px solid #B3453D; color:#8A332C; padding:12px 14px;
+  border-radius:var(--radius); font-size:13.5px; margin-top:14px;
+}
+.idx-inline-warning.show{display:block;}
+
+/* Why not just use a portal — differentiation block */
+.compare-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
+.compare-card{background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:22px;}
+.compare-card .eyebrow{font-size:11px; color:var(--sage); margin-bottom:8px;}
+.compare-card h3{font-size:16.5px; margin-bottom:6px;}
+.compare-card p{font-size:14px;}
+
+/* Trust placeholder graceful states */
+.photo-monogram{
+  aspect-ratio:3/4; background:var(--navy); border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold); font-family:'Fraunces',serif; font-size:42px; font-weight:600;
+}
+.placeholder-fade{color:var(--slate-light); font-size:13px; font-style:italic;}
+
+/* Form validation state */
+.field-error{border-color:#B3453D !important; background:#FBEEEC !important;}
+.form-error-banner{
+  background:#FBEEEC; border:1px solid #B3453D; color:#8A332C; padding:14px 16px;
+  border-radius:var(--radius); font-size:14px; margin-bottom:18px; display:none;
+}
+.form-error-banner.show{display:block;}
+
+/* Form section */
+.form-section{background:var(--navy); color:var(--white);}
+.form-section .section-head p{color:#C9CFDC;}
+.form-section .eyebrow{color:var(--gold);}
+.form-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:start;}
+@media(max-width:860px){.form-grid{grid-template-columns:1fr;}}
+.form-card{background:var(--white); border-radius:var(--radius); padding:32px; color:var(--navy);}
+.field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;}
+@media(max-width:520px){.field-row{grid-template-columns:1fr;}}
+.field{display:flex; flex-direction:column; gap:6px; margin-bottom:14px;}
+.field label{font-size:13px; font-weight:600; color:var(--navy);}
+.field input, .field select{
+  padding:13px 14px; border:1.5px solid var(--line); border-radius:var(--radius);
+  font-family:'IBM Plex Sans',sans-serif; font-size:16px; background:var(--cream-dim); color:var(--navy);
+}
+.field input:focus, .field select:focus{outline:2px solid var(--gold); outline-offset:1px; background:var(--white);}
+.radio-group{display:flex; flex-wrap:wrap; gap:8px;}
+.radio-pill{
+  font-size:13px; padding:8px 13px; border:1.5px solid var(--line); border-radius:999px;
+  cursor:pointer; background:var(--cream-dim); user-select:none;
+}
+.radio-pill input{display:none;}
+.radio-pill:has(input:checked){background:var(--navy); color:var(--white); border-color:var(--navy);}
+.form-side-note{font-size:14px; color:#C9CFDC; margin-top:20px; border-top:1px solid rgba(255,255,255,0.15); padding-top:20px;}
+.form-side-note strong{color:var(--white); display:block; margin-bottom:6px; font-family:'Fraunces',serif; font-size:16px;}
+.req{color:var(--gold);}
+.field-error-msg{font-size:12.5px; color:#B3453D; display:none; margin-top:2px;}
+.field-error-msg.show{display:block;}
+
+/* Why work with me — 3 benefits */
+.benefit-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;}
+.benefit-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:26px;
+  border-top:3px solid var(--gold); transition:transform .18s ease, box-shadow .18s ease;
+}
+.benefit-card:hover{transform:translateY(-3px); box-shadow:0 10px 24px rgba(13,31,60,0.08);}
+.benefit-card h3{margin-bottom:8px;}
+.benefit-card p{font-size:14.5px;}
+
+.stat-placeholder{
+  border:1px dashed var(--line); padding:12px 14px; border-radius:var(--radius); font-size:12.5px;
+  color:var(--slate-light); font-family:'IBM Plex Mono',monospace; margin-top:8px;
+}
+
+.stat-strip{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:28px 0;
+}
+.stat-item{text-align:center; padding:0 12px;}
+.stat-item .stat-num{
+  font-family:'Fraunces',serif; font-size:30px; color:var(--navy); display:block; line-height:1.1;
+}
+.stat-item .stat-label{
+  font-size:12px; color:var(--slate-light); text-transform:uppercase; letter-spacing:0.06em; margin-top:6px; display:block;
+}
+
+/* Trust */
+.trust-grid{display:grid; grid-template-columns:280px 1fr; gap:44px;}
+@media(max-width:760px){.trust-grid{grid-template-columns:1fr;}}
+.agent-photo{
+  aspect-ratio:3/4; background:var(--cream-dim); border:1px dashed var(--line); border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;
+  color:var(--slate-light); font-size:13px; font-family:'IBM Plex Mono',monospace;
+}
+.credential-row{margin-top:16px; font-size:13px; color:var(--slate); border-top:1px solid var(--line); padding-top:14px;}
+.trust-detail h3{margin-bottom:10px;}
+.testimonial-card{
+  border:1px dashed var(--line); border-radius:var(--radius); padding:18px 20px; margin-top:14px;
+  color:var(--slate-light); font-size:14px; font-style:italic; background:var(--cream-dim);
+}
+
+.pull-quote{
+  border-left:3px solid var(--gold); padding:6px 0 6px 22px; margin:26px 0;
+  font-family:'Fraunces',serif; font-size:19px; font-style:italic; color:var(--navy); line-height:1.5;
+}
+
+/* Video */
+.video-frame{
+  aspect-ratio:16/9; background:var(--navy); border-radius:var(--radius); display:flex;
+  align-items:center; justify-content:center; position:relative; overflow:hidden;
+}
+.play-btn{
+  width:64px; height:64px; border-radius:50%; background:var(--gold); display:flex; align-items:center;
+  justify-content:center; cursor:pointer; border:none; padding:0;
+}
+.play-btn:disabled{background:var(--slate-light); cursor:default;}
+.play-btn::after{content:''; border-left:18px solid var(--navy); border-top:11px solid transparent; border-bottom:11px solid transparent; margin-left:5px;}
+.video-caption{color:#9AA5B8; font-size:12.5px; font-family:'IBM Plex Mono',monospace; text-align:center; margin-top:12px;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; padding:20px 0; display:flex;
+  justify-content:space-between; align-items:center; cursor:pointer; gap:16px;
+}
+.faq-q h3{font-size:17px;}
+.faq-icon{font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--gold); flex-shrink:0; transition:transform .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+.faq-a p{padding-bottom:20px; font-size:15px;}
+
+/* Final CTA */
+.final-cta{background:var(--navy); color:var(--white); text-align:center;}
+.final-cta h2{color:var(--white);}
+.final-cta .lede{color:#C9CFDC; margin:16px auto 0;}
+.final-cta .hero-ctas{justify-content:center; margin-top:30px;}
+
+footer{padding:32px 0; text-align:center; font-size:12.5px; color:var(--slate-light); border-top:1px solid var(--line);}
+
+/* Sticky mobile CTA bar */
+.mobile-bar{
+  position:fixed; bottom:0; left:0; right:0; z-index:60; background:var(--navy);
+  display:flex; gap:10px; padding:12px 16px; box-shadow:0 -4px 14px rgba(0,0,0,0.12);
+}
+.mobile-bar .btn{flex:1; padding:13px 10px; font-size:14px; min-height:44px;}
+@media(min-width:860px){.mobile-bar{display:none;}}
+body{padding-bottom:76px;}
+@media(min-width:860px){body{padding-bottom:0;}}
+
+@media(max-width:640px){
+  .section{padding:52px 0;}
+  h2{font-size:28px;}
+  .search-module{padding:22px 18px;}
+  .search-cta-row{flex-direction:column; align-items:stretch;}
+  #seeMatchingHomesBtn{width:100%;}
+  .search-validation{text-align:center;}
+  .search-option{padding:12px 16px; font-size:13.5px;}
+}
+@media(max-width:400px){
+  .nav-inner{padding:14px 16px;}
+  .brand{font-size:16px; white-space:nowrap;}
+  .brand span, .brand .brand-suffix{display:none;}
+  .nav-browse{font-size:12.5px;}
+  .nav-cta{gap:8px;}
+  header .btn{padding:9px 12px !important; font-size:12.5px !important;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav-inner" aria-label="Primary">
+    <a href="#" class="brand">Saad Tai <span class="brand-suffix"><span>·</span> Real Broker NY</span></a>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:518-348-9535">518-348-9535</a>
+      <a href="#buyer-form" class="btn btn-outline-dark" style="padding:10px 18px; min-height:auto; font-size:14px;">Build My Search Plan</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Scarsdale · Rye · Chappaqua · Bronxville · Westchester County</div>
+    <h1>A Smarter Plan for Buying the Right Home in Westchester</h1>
+    <p class="lede">I help buyers compare towns, understand what the taxes and commute will actually mean for their life, and figure out whether a home is really worth what it's asking — before they write an offer, not after.</p>
+    <p style="color:#C9CFDC; font-size:15px; margin-top:14px; max-width:56ch;">Westchester isn't a place you can shortcut. I've found the buyers who do best here are the ones who take a little time to prepare before they start touring — whether you're relocating from the city or you've lived here for years, that's where I come in.</p>
+    <div class="hero-ctas">
+      <a href="#buyer-form" class="btn btn-primary">Let's Build Your Home Search Plan</a>
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9AA5B8; margin-top:20px;">For buyers planning to purchase within the next 90 days—or those who need help understanding what steps to take first.</p>
+    <p style="font-size:12.5px; color:#7A8494; margin-top:10px; max-width:56ch;">Timing depends on financing, inventory, buyer criteria, offer terms, and seller acceptance. No specific result can be guaranteed.</p>
+  </div>
+  <div class="skyline">
+    <svg viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="1200" height="160" fill="#0D1F3C"/>
+      <!-- Rolling tree line — Westchester's leafy suburban character -->
+      <g fill="#14243f">
+        <circle cx="70" cy="118" r="20"/>
+        <circle cx="140" cy="108" r="26"/>
+        <circle cx="215" cy="120" r="18"/>
+      </g>
+      <!-- Colonial-style rooftops -->
+      <g fill="#16294d">
+        <polygon points="280,110 310,80 340,110" />
+        <rect x="285" y="110" width="50" height="50"/>
+        <polygon points="360,118 385,92 410,118" />
+        <rect x="364" y="118" width="42" height="42"/>
+      </g>
+      <!-- Metro-North commuter rail line — defining feature of the market -->
+      <line x1="0" y1="150" x2="1200" y2="150" stroke="#2a3f63" stroke-width="3"/>
+      <line x1="0" y1="156" x2="1200" y2="156" stroke="#2a3f63" stroke-width="2"/>
+      <!-- Train silhouette -->
+      <g fill="#16294d">
+        <rect x="470" y="122" width="150" height="26" rx="4"/>
+        <rect x="480" y="128" width="18" height="12" fill="#0D1F3C"/>
+        <rect x="505" y="128" width="18" height="12" fill="#0D1F3C"/>
+        <rect x="530" y="128" width="18" height="12" fill="#0D1F3C"/>
+        <rect x="555" y="128" width="18" height="12" fill="#0D1F3C"/>
+        <rect x="580" y="128" width="18" height="12" fill="#0D1F3C"/>
+      </g>
+      <!-- gold pin markers over rooftops -->
+      <circle cx="310" cy="72" r="4" fill="#B8912E"/>
+      <circle cx="385" cy="84" r="4" fill="#B8912E"/>
+      <!-- more rolling tree line and colonial rooftops toward the right -->
+      <g fill="#14243f">
+        <circle cx="700" cy="118" r="18"/>
+        <circle cx="770" cy="110" r="24"/>
+        <circle cx="840" cy="120" r="16"/>
+      </g>
+      <g fill="#16294d">
+        <polygon points="900,112 925,88 950,112" />
+        <rect x="904" y="112" width="42" height="42"/>
+        <polygon points="1000,118 1025,94 1050,118" />
+        <rect x="1004" y="118" width="42" height="36"/>
+      </g>
+      <circle cx="925" cy="82" r="4" fill="#B8912E"/>
+      <g fill="#14243f">
+        <circle cx="1100" cy="120" r="20"/>
+        <circle cx="1160" cy="112" r="18"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="section" style="padding-top:56px; padding-bottom:56px;">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div>
+        <div class="agent-photo" id="agentPhoto"><img src="headshot.jpg" alt="Saad Tai, Westchester County buyer's advisor, Real Broker NY LLC" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"></div>
+        <div class="credential-row">
+          <strong style="color:var(--navy); display:block; font-family:'Fraunces',serif; font-size:16px; margin-bottom:4px;">Saad Tai</strong>
+          NY License #10401373295<br>
+          Real Broker NY LLC<span id="gbpLinkWrap"></span>
+        </div>
+      </div>
+      <div class="trust-detail">
+        <div class="eyebrow">Who you'd be working with</div>
+        <h2 style="margin-top:10px;">You'll be talking to me, not a call center.</h2>
+        <p style="margin-top:14px;">When you call, you get me — not an assistant fielding your questions, not a different agent every time you have one. I think that matters more than people expect until they've been on the other end of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP — populated only from CONFIG.STATS below. Any stat left blank is
+     simply omitted; nothing is invented. If ALL stats are blank, hide entirely. -->
+<section class="section" id="statStripSection" style="padding-top:0; padding-bottom:36px; display:none;">
+  <div class="wrap">
+    <div class="stat-strip" id="statStrip"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — populated only from CONFIG.TESTIMONIALS below. Hidden until
+     real, attributable client testimonials are added. Nothing is invented. -->
+<section class="section" id="testimonialsSection" style="padding-top:16px; padding-bottom:36px; display:none;">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">What clients say</div>
+      <h2>In Their Words</h2>
+    </div>
+    <div class="benefit-grid" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<!-- SERVICE MODEL — why the way this business is built serves clients better -->
+<section class="section" style="background:var(--cream-dim);">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">How I work</div>
+      <h2>My Schedule Works Around Yours</h2>
+      <p>I've noticed most people end up adjusting their whole week around their agent's calendar. I decided early on I didn't want to run my business that way. If a good listing comes up and I genuinely can't be there myself, I have a showing partner I trust who can walk it with you the same day — because I'd rather you see the home than lose it waiting on me. Everything that actually matters — pricing, negotiation, strategy — still goes through me. The paperwork and scheduling get handled behind the scenes so I can spend my time on the parts that require judgment, not a calendar app.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>You won't miss a home because I was busy</h3>
+        <p>If I can't be there the moment a listing goes live, a partner I trust can show it to you right away. I'd rather share the showing than have you miss the house.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>You're stuck with me, not a rotation</h3>
+        <p>Strategy, pricing, negotiation, inspections, closing — that's all me, every time. I've never liked the idea of handing someone off once the paperwork starts.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>My attention goes where it counts</h3>
+        <p>I have people who handle the administrative side of a transaction so I don't have to. That frees me up to actually think about your deal instead of chasing documents.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>This was intentional</h3>
+        <p>I built my business this way on purpose. I'd rather work closely with fewer clients than spread myself thin across a big pipeline.</p>
+      </div>
+    </div>
+    <p style="margin-top:28px; color:var(--slate); max-width:70ch;">I think that's what people actually want from an advisor — someone who's reachable, who remembers the conversation you had last week, and who's paying attention the whole way through. From our first call to closing, you'll always know exactly who to call. It's me.</p>
+  </div>
+</section>
+
+<!-- POSITIONING STATEMENT — why Westchester buyers need more than a portal -->
+<section class="section">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="eyebrow">Why work with a Westchester specialist</div>
+      <h2>Westchester isn't one market. It's dozens of them.</h2>
+      <p>Something I try to explain to every buyer early on: two towns ten minutes apart can have completely different school ratings, tax rates, and commute times to Grand Central. A listing site will give you square footage and photos. It won't tell you why a home in Rye costs more than a similar one in Ossining, whether that "great school district" line actually holds up for the specific street you're looking at, or how many offers a house like this one has been getting lately.</p>
+      <p style="margin-top:14px;">That's usually where I end up being useful — especially for people relocating from the city who haven't had years to absorb all of this the slow way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THREE-STEP BUYER SYSTEM -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How the plan works</div>
+      <h2>How I actually work with buyers.</h2>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>1. We figure out what actually matters to you</h3>
+        <p>Schools, commute, walkability, taxes, lot size — these usually matter more than the listing photos. I'd rather spend an hour on this upfront than waste a Saturday touring homes that were never going to work.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>2. We compare towns with real numbers</h3>
+        <p>School data, effective tax rates, actual Metro-North commute times on the Harlem, Hudson, and New Haven lines, and how competitive a town has been lately — not just what people say about a place.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>3. When it's right, we move — and I'll tell you if it's not</h3>
+        <p>Westchester's best towns are often competitive, so when the right home shows up, I'll give you an honest read on it and help you put together an offer that actually holds up through inspection and appraisal. And if something feels off about a property, I'll say so, even if that's not what you want to hear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STACK -->
+<section class="section" style="background:var(--cream-dim);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What you receive</div>
+      <h2>Here's what that actually looks like.</h2>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>A real town comparison</h3>
+        <p>Not a "top towns" list I copied from somewhere. Real numbers on the specific towns you're actually weighing against each other.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Help translating city life into Westchester life</h3>
+        <p>If you're coming from the city, a lot of what you're used to doesn't map cleanly here. I've walked enough people through that gap to know the questions you haven't thought to ask yet.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>An honest read on price</h3>
+        <p>Before you write an offer, I'll tell you what I actually think a home is worth — even when that's a harder conversation than "it's a great house, let's go."</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Someone in your corner when it gets competitive</h3>
+        <p>The good towns get multiple offers. I've been through enough of these to help you put together terms that actually win — without talking you into overpaying.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THE PLAN INCLUDES -->
+<section class="section">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="eyebrow">The plan</div>
+      <h2>What Your Westchester Home Search Plan Includes</h2>
+      <p>Some buyers come to me ready to move. Others are still sorting out which towns even make sense. Either way works — the plan just gives us a clear path from that first conversation to the closing table.</p>
+    </div>
+    <p style="color:var(--slate); margin-bottom:8px; font-weight:600;">Here's what we actually do together:</p>
+    <ul style="color:var(--slate); padding-left:20px; line-height:1.9; margin-bottom:20px;">
+      <li>Get specific about what matters — schools, commute, taxes, space, lifestyle</li>
+      <li>Build a real comparison of the towns and listings that fit</li>
+      <li>Flag the strongest opportunities as they come up</li>
+      <li>Tour homes and talk through what we're actually seeing before you offer</li>
+      <li>Put together offer and negotiation strategy for the competitive ones</li>
+      <li>Keep adjusting as we go — a search rarely looks the same in week four as it did in week one</li>
+    </ul>
+    <p style="font-size:12.5px; color:var(--slate-light);">Timing depends on your readiness, financing, inventory, and what sellers decide. I'd rather take the time to get you the right home than rush you into the wrong one.</p>
+  </div>
+</section>
+
+<!-- NO LONG-TERM LOCK-IN -->
+<section class="section" style="background:var(--navy); color:var(--white);">
+  <div class="wrap" style="max-width:760px;">
+    <div class="eyebrow" style="color:var(--gold);">No pressure</div>
+    <h2 style="color:var(--white); margin-top:10px;">No Long-Term Lock-In</h2>
+    <p style="color:#C9CFDC; margin-top:16px;">I don't think you should feel stuck with someone who isn't communicating well or isn't giving you the guidance you actually need. If that's not me, you shouldn't feel locked in.</p>
+    <p style="color:#C9CFDC; margin-top:14px;">If a buyer representation agreement is required, I'll walk you through exactly what it says before you sign anything, and it will have a defined scope and duration, subject to brokerage requirements.</p>
+    <p style="color:#C9CFDC; margin-top:14px;">No pressure, nothing hidden, and no obligation to buy a home that isn't right for you. The first conversation doesn't commit you to anything.</p>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="section">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="eyebrow">Is this a fit?</div>
+      <h2>Who I actually tend to work best with</h2>
+    </div>
+    <ul style="color:var(--slate); padding-left:20px; line-height:1.9;">
+      <li>You're relocating from NYC and honestly don't know how the towns out here differ yet</li>
+      <li>Schools are the deciding factor for your family, and you want to get it right</li>
+      <li>You're comparing a handful of towns and want someone to tell you the truth about each one</li>
+      <li>You're buying at the higher end and want real scrutiny on value, not just enthusiasm</li>
+      <li>Taxes or commute time are a real concern, and you want actual numbers, not a guess</li>
+      <li>You're preapproved, or close to it, and ready to move when the right home shows up</li>
+    </ul>
+    <p style="color:var(--slate-light); font-size:14px; margin-top:20px;">If you're just browsing with no real timeline yet, that's fine too — a short conversation can still help you get oriented, no pressure either way.</p>
+    <p style="color:var(--slate); font-size:14px; margin-top:24px; padding-top:20px; border-top:1px solid var(--line);">One thing that surprises people: in the towns everyone wants, good homes move fast and often get more than one offer. I've seen buyers lose out simply because they hadn't sorted out their financing or priorities yet when the right house appeared. That's really the whole point of doing this work upfront.</p>
+  </div>
+</section>
+
+<!-- WHY BUYERS CHOOSE TO WORK WITH ME -->
+<section class="section" style="background:var(--cream-dim);">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="eyebrow">Why buyers choose to work with me</div>
+      <h2>Direct Access, From First Call to Closing</h2>
+      <p>Here's what I believe: if you're trusting someone with a decision this size, you should be able to actually reach that person. Not an assistant. Not whoever's covering the desk that day. From our first conversation through closing, that's me.</p>
+    </div>
+    <blockquote class="pull-quote">"My job isn't to convince you to buy a house. My job is to help you understand the market well enough to know when the right home is actually worth pursuing."</blockquote>
+    <ul style="color:var(--slate); padding-left:20px; line-height:1.9;">
+      <li>You reach me directly — not an assistant, not a call center, not a queue</li>
+      <li>I have people who handle the administrative side, so my attention stays on your strategy, not paperwork</li>
+      <li>I built my business around this on purpose, because I'd rather advise well than manage a big pipeline</li>
+      <li>I care more about you feeling good about the decision in five years than about closing quickly</li>
+    </ul>
+    <p style="margin-top:22px; color:var(--slate);">In my experience, that's what people actually want from an advisor — someone who picks up the phone, remembers the conversation from last week, and tells you the truth even when it's not what you were hoping to hear.</p>
+  </div>
+</section>
+
+<!-- BUYER FORM -->
+<section class="section form-section" id="buyer-form">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Westchester Home Search Plan</div>
+      <h2>Build My Westchester Home Search Plan</h2>
+      <p>Tell me a bit about what you're looking for and which towns you're weighing. I'll personally read through it myself and reach out to talk through your goals, answer whatever questions you've got, and figure out the right next step together.</p>
+    </div>
+    <div class="form-grid">
+      <div id="formColumn">
+      <form class="form-card" id="buyerForm" novalidate>
+        <!-- Hidden campaign attribution fields — populated from URL params by JS below -->
+        <input type="hidden" id="utm_source" name="utm_source" value="">
+        <input type="hidden" id="utm_medium" name="utm_medium" value="">
+        <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+        <input type="hidden" id="utm_term" name="utm_term" value="">
+        <input type="hidden" id="utm_content" name="utm_content" value="">
+        <input type="hidden" id="gclid" name="gclid" value="">
+        <input type="hidden" id="landing_page_version" name="landing_page_version" value="westchester-buyer-v3">
+
+        <!-- Honeypot — invisible to people, sometimes filled by bots. Never shown, never tabbed to. -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="hp_confirm">Leave this field blank</label>
+          <input type="text" id="hp_confirm" name="hp_confirm" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Full name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="First and last name" minlength="2" required aria-describedby="name-error">
+            <span class="field-error-msg" id="name-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="518-555-0100" pattern="[0-9()+\-.\s]{10,}" title="Enter a valid phone number (at least 10 digits)" required aria-describedby="phone-error">
+            <span class="field-error-msg" id="phone-error" role="alert"></span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required aria-describedby="email-error">
+          <span class="field-error-msg" id="email-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label>Approximate buying timeframe <span class="req">*</span></label>
+          <div class="radio-group" role="radiogroup" aria-required="true">
+            <label class="radio-pill"><input type="radio" name="timeline" value="asap" required>As soon as possible</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="30">Within 30 days</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="60">Within 60 days</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="90">Within 90 days</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="3-6">Three to six months</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="6+">More than six months</label>
+            <label class="radio-pill"><input type="radio" name="timeline" value="exploring">I am still exploring</label>
+          </div>
+          <span class="field-error-msg" id="timeline-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label>Are you relocating from NYC or elsewhere? <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+          <div class="radio-group">
+            <label class="radio-pill"><input type="radio" name="relocating_from" value="nyc">Yes, from NYC</label>
+            <label class="radio-pill"><input type="radio" name="relocating_from" value="elsewhere">Yes, from elsewhere</label>
+            <label class="radio-pill"><input type="radio" name="relocating_from" value="already_local">No, already local to Westchester</label>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="area">Towns you're considering <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="area" name="area">
+              <option value="" selected disabled>Select a town (optional)</option>
+              <option>Scarsdale</option>
+              <option>Rye</option>
+              <option>Bronxville</option>
+              <option>Larchmont</option>
+              <option>Chappaqua</option>
+              <option>Armonk</option>
+              <option>Bedford</option>
+              <option>Katonah</option>
+              <option>Pleasantville</option>
+              <option>White Plains</option>
+              <option>Hastings-on-Hudson</option>
+              <option>Dobbs Ferry</option>
+              <option>Irvington</option>
+              <option>Tarrytown</option>
+              <option>Rye Brook</option>
+              <option>Harrison</option>
+              <option>Mamaroneck</option>
+              <option>New Rochelle</option>
+              <option>Croton-on-Hudson</option>
+              <option>Ossining</option>
+              <option>Not sure yet — comparing towns</option>
+              <option>Other</option>
+            </select>
+            <div class="custom-location-field" id="formCustomLocationWrap" style="display:none; margin-top:8px;">
+              <label for="formCustomLocation">Enter the town, ZIP code, or neighborhood you're interested in</label>
+              <input type="text" id="formCustomLocation" name="area_other" placeholder="e.g. Somers, Yorktown, or 10598" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="price">Approximate price range <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="price" name="price">
+              <option value="" selected disabled>Select a price range (optional)</option>
+              <option>Under $700k</option>
+              <option>$700k – $1M</option>
+              <option>$1M – $1.5M</option>
+              <option>$1.5M – $2.5M</option>
+              <option>$2.5M+</option>
+              <option>Still figuring this out</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="type">Property type <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="type" name="type">
+              <option value="" selected disabled>Select a property type (optional)</option>
+              <option>Any home</option>
+              <option>Single-family</option>
+              <option>Condo</option>
+              <option>Townhouse</option>
+              <option>New construction</option>
+              <option>Move-in ready</option>
+              <option>Multi-family</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="priority">Top priority <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="priority" name="priority">
+              <option value="" selected disabled>Select a top priority (optional)</option>
+              <option value="schools">School district</option>
+              <option value="commute">Commute to NYC</option>
+              <option value="space">More space</option>
+              <option value="taxes">Lower property taxes</option>
+              <option value="walkability">Walkable town / downtown</option>
+              <option value="not_sure">Still weighing priorities</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Preapproval status <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+          <div class="radio-group">
+            <label class="radio-pill"><input type="radio" name="preapproved" value="yes">Yes, I am already preapproved</label>
+            <label class="radio-pill"><input type="radio" name="preapproved" value="working_on_it">I am currently working on it</label>
+            <label class="radio-pill"><input type="radio" name="preapproved" value="need_help">I need help getting preapproved</label>
+            <label class="radio-pill"><input type="radio" name="preapproved" value="cash">I am paying cash</label>
+            <label class="radio-pill"><input type="radio" name="preapproved" value="unsure">I am not sure yet</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="other_agent">Are you currently committed to working with another real estate agent? <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+          <select id="other_agent" name="other_agent">
+            <option value="" selected disabled>Please select (optional)</option>
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+            <option value="spoken_not_committed">I have spoken with an agent but have not committed</option>
+            <option value="not_sure">I am not sure</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="need_to_sell">Do you need to sell a property before purchasing? <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="need_to_sell" name="need_to_sell">
+              <option value="" selected disabled>Please select (optional)</option>
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+              <option value="possibly">Possibly</option>
+              <option value="not_sure">I am not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="help_needed">What would you like the most help with? <span style="color:var(--slate-light); font-weight:400;">(optional)</span></label>
+            <select id="help_needed" name="help_needed">
+              <option value="" selected disabled>Please select (optional)</option>
+              <option value="comparing_towns">Comparing towns</option>
+              <option value="finding_homes">Finding the right home</option>
+              <option value="pricing_offers">Understanding pricing and offers</option>
+              <option value="negotiation_closing">Negotiation and closing support</option>
+              <option value="not_sure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- lead_intent_tier is computed in JS from the timeline answer; never shown to the visitor -->
+        <input type="hidden" id="lead_intent_tier" name="lead_intent_tier" value="">
+
+        <div class="form-error-banner" id="formErrorBanner">
+          Something went wrong submitting this — your information hasn't been lost. Please try again, or call <a href="tel:518-348-9535" style="color:#8A332C; text-decoration:underline;">518-348-9535</a> directly.
+        </div>
+
+        <p style="font-size:13px; color:var(--slate); margin-top:6px; margin-bottom:14px;">Your information stays private — I'll read it myself and reach out personally. No automated spam, no third parties.</p>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Let's Build Your Home Search Plan</button>
+      </form>
+
+      <!-- THANK YOU PANEL (hidden until form submission succeeds) -->
+      <div class="form-card" id="thankYouPanel" style="display:none;">
+        <h3 style="margin-bottom:10px;">Got it — thank you</h3>
+        <p style="margin-bottom:14px;">I'll read through this myself and reach out to talk about what you're looking for, the towns on your mind, and where it makes sense to start.</p>
+        <p style="margin-bottom:20px;">Keep an eye out for a call or text from me. Once we connect, I'll put together a search and town comparison based on what actually matters to you.</p>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="tel:518-348-9535" class="btn btn-primary btn-block">Call Saad Now — 518-348-9535</a>
+        </div>
+      </div>
+      </div>
+      <div class="form-side-note" id="formSideNote">
+        <strong>What happens after you submit</strong>
+        I read every one of these myself and follow up — usually by phone or text, since that's just faster than email for most people. If you're already working with someone else or still just comparing towns, no need to hide that. Say so above.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap" style="max-width:800px;">
+    <div class="section-head">
+      <div class="eyebrow">Common questions</div>
+      <h2>Before you reach out</h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item">
+        <button class="faq-q"><h3>Is the initial consultation free?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. That first conversation costs you nothing — it's really just about figuring out where you stand and whether I'm the right person to help.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>How quickly can I expect to buy?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Honestly, it depends — on your readiness and on when the right home actually shows up. I can't promise a timeline, and I wouldn't trust anyone who does. What I can promise is that once you're ready, I won't waste your time. And I won't push you into something wrong just to hit a deadline.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>I'm relocating from NYC and don't know Westchester well. Where do I start?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Honestly, that's probably the most common conversation I have. We'll talk through what actually matters to you — commute, schools, space, walkability — and I'll help you narrow down which towns are worth your Saturday, instead of you guessing from a listing site.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>How different are property taxes town to town?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>More than most people expect, even between neighboring towns. I'll walk you through the actual effective tax rate on the specific properties you're looking at — not just a town-wide average that doesn't tell you much.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>What's the commute actually like from these towns?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>It varies more than people assume — express versus local service on Metro-North makes a real difference. I'll give you realistic numbers for the towns you're comparing, not just how far apart they look on a map.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>Are homes in the best school districts always competitive?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Often, yes. A well-priced home in a strong district can get several offers within days. I'll tell you honestly how competitive a town or listing has been recently, so you're not blindsided when you go to make an offer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>Do I have to sign a long-term agreement?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Not for that first conversation, no. If a buyer representation agreement is required down the line, I'll walk you through it line by line before you sign anything, and it'll have a clear scope and duration, subject to brokerage requirements.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>Do I need to be preapproved?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>I'd strongly recommend it before you start touring seriously, especially in a competitive town. If you're not there yet, that's fine — tell me, and I'll help you figure out the next step.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>Can you help me if I also need to sell my current home?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Just mention that on the form so we can talk through the timing and strategy for both sides at once — it changes the plan a bit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><h3>Can I still browse homes online?</h3><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Of course. Once we connect, I'll set you up with a search and town comparison built around what actually matters to you, not a generic feed.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Saad Tai · Real Broker NY LLC · NY License #10401373295 · Serving Westchester County, NY · Equal Housing Opportunity<span id="gbpLinkWrapFooter"></span>
+    <div style="margin-top:10px; font-size:11.5px; color:var(--slate-light);">Your information is never sold. Contact directly with any privacy questions or requests.</div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:518-348-9535" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.4); color:#fff;">Call</a>
+  <a href="#buyer-form" class="btn btn-primary">Build My Plan</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURATION — one place for real business info and optional integrations.
+   Verified, known facts are hard-coded directly (name, phone, license) so they
+   never depend on JavaScript executing correctly. Optional/unverified items
+   default to empty and are hidden or shown an honest fallback until real
+   values are supplied here.
+   ============================================================ */
+const CONFIG = {
+  PHONE_DISPLAY: '518-348-9535',
+  PHONE_HREF: 'tel:518-348-9535',
+
+  // TODO: paste the real, verified Google Business Profile / Google Maps URL here.
+  // Until this is set, no Google link is shown anywhere on the page.
+  GOOGLE_BUSINESS_PROFILE_URL: '',
+
+  // TODO: paste a real video embed URL (e.g. a YouTube embed link) here.
+  // Until this is set, the video section shows an honest "coming soon" state.
+  VIDEO_URL: '',
+
+  // TODO: paste a real Google Maps embed URL here if a map is ever wanted.
+  // Until this is set, no map section is rendered at all.
+  MAP_EMBED_URL: '',
+
+  // TODO: paste a real, restricted Google Maps Platform API key here to enable
+  // Places Autocomplete on the "Other" location fields. Leave blank to skip —
+  // the plain text fields work correctly with no key at all.
+  GOOGLE_MAPS_API_KEY: '',
+
+  // TODO — TRUST STATS: fill in only the ones you can verify. Leave any value
+  // blank ('') to omit it — nothing here is invented or estimated. If every
+  // field below is blank, the entire stat strip stays hidden automatically.
+  STATS: {
+    homesSold: '',        // e.g. '40+'
+    yearsExperience: '',  // e.g. '6'
+    clientsHelped: '',    // e.g. '75+'
+    googleRating: '',     // e.g. '5.0' — only set once Google reviews exist
+    googleReviewCount: '',// e.g. '12' — paired with googleRating
+    googleReviewsUrl: ''  // your real Google Business Profile review link
+  },
+
+  // TODO — TESTIMONIALS: add real, attributable client testimonials only.
+  // Each needs at minimum a quote and a name (first name + last initial is
+  // fine). Leave the array empty to keep this section hidden.
+  // Example: { quote: 'Saad made our relocation from the city painless.', name: 'Jordan M.', detail: 'Bought in Chappaqua' }
+  TESTIMONIALS: []
+};
+
+/* Renders the stat strip from CONFIG.STATS above. Any blank field is skipped.
+   If nothing is filled in, the whole section stays hidden — no placeholder
+   numbers are ever shown to a visitor. */
+(function renderStatStrip(){
+  const s = CONFIG.STATS || {};
+  const items = [];
+  if(s.homesSold) items.push({num: s.homesSold, label: 'Homes Sold'});
+  if(s.yearsExperience) items.push({num: s.yearsExperience, label: 'Years Experience'});
+  if(s.clientsHelped) items.push({num: s.clientsHelped, label: 'Clients Helped'});
+  if(s.googleRating){
+    const label = s.googleReviewCount ? ('Google Rating (' + s.googleReviewCount + ' reviews)') : 'Google Rating';
+    items.push({num: s.googleRating + ' ★', label: label, url: s.googleReviewsUrl || ''});
+  }
+  if(items.length === 0) return; // stays hidden — section defaults to display:none
+
+  const strip = document.getElementById('statStrip');
+  const section = document.getElementById('statStripSection');
+  if(!strip || !section) return;
+  strip.innerHTML = items.map(function(it){
+    const inner = '<span class="stat-num">' + it.num + '</span><span class="stat-label">' + it.label + '</span>';
+    return it.url
+      ? '<a class="stat-item" href="' + it.url + '" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">' + inner + '</a>'
+      : '<div class="stat-item">' + inner + '</div>';
+  }).join('');
+  section.style.display = '';
+})();
+
+/* Renders testimonials from CONFIG.TESTIMONIALS above. Stays hidden if empty. */
+(function renderTestimonials(){
+  const list = CONFIG.TESTIMONIALS || [];
+  if(list.length === 0) return; // stays hidden — section defaults to display:none
+
+  const grid = document.getElementById('testimonialsGrid');
+  const section = document.getElementById('testimonialsSection');
+  if(!grid || !section) return;
+  grid.innerHTML = list.map(function(t){
+    const detail = t.detail ? '<div style="color:var(--slate-light); font-size:12.5px; margin-top:10px;">' + t.detail + '</div>' : '';
+    return '<div class="benefit-card"><p style="font-style:italic; color:var(--slate);">"' + t.quote + '"</p>' +
+      '<div style="font-family:\'Fraunces\',serif; color:var(--navy); margin-top:14px; font-size:15px;">' + t.name + '</div>' + detail + '</div>';
+  }).join('');
+  section.style.display = '';
+})();
+
+/* ============================================================
+   TRACKING STUB — replace pushEvent() body with real GA4 / Google Ads calls.
+   e.g. gtag('event', name, params);  or  dataLayer.push({event:name, ...params});
+   TODO: Insert GA4 tag and Google Ads conversion tag in <head> before relying on this
+   (see the TODO block at the top of <head> for the exact snippets).
+
+   SECONDARY ENGAGEMENT events (not the business conversion):
+     form_started
+
+   PRIMARY LEAD ACTIONS (the actual business conversions):
+     form_submitted, phone_call_click, consultation_booked
+   ============================================================ */
+function pushEvent(name, params){
+  params = params || {};
+  console.log('[tracking]', name, params); // TODO: replace with real gtag/dataLayer call
+  // Example once GA4 is installed:
+  // if (typeof gtag === 'function') gtag('event', name, params);
+}
+
+/* Populate hidden attribution fields from the URL's query string */
+function getAllUrlParams(){
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get('utm_source') || '',
+    utm_medium: params.get('utm_medium') || '',
+    utm_campaign: params.get('utm_campaign') || '',
+    utm_term: params.get('utm_term') || '',
+    utm_content: params.get('utm_content') || '',
+    gclid: params.get('gclid') || ''
+  };
+}
+(function populateHiddenFields(){
+  const values = getAllUrlParams();
+  Object.keys(values).forEach(key=>{
+    const field = document.getElementById(key);
+    if(field) field.value = values[key];
+  });
+})();
+
+// Form's own area select — reveal/require the custom field only while "Other" is chosen there too
+document.getElementById('area').addEventListener('change', function(){
+  const formCustomWrap = document.getElementById('formCustomLocationWrap');
+  const formCustomInput = document.getElementById('formCustomLocation');
+  if(this.value === 'Other'){
+    formCustomWrap.style.display = 'block';
+    formCustomInput.required = true;
+  } else {
+    formCustomWrap.style.display = 'none';
+    formCustomInput.required = false;
+    formCustomInput.value = '';
+  }
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn = item.querySelector('.faq-q');
+  const answer = item.querySelector('.faq-a');
+  btn.addEventListener('click', ()=>{
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+
+// form_started — fires once, on first focus inside the form
+const buyerForm = document.getElementById('buyerForm');
+let formStarted = false;
+buyerForm.addEventListener('focusin', function(){
+  if(!formStarted){
+    formStarted = true;
+    pushEvent('form_started');
+  }
+});
+
+// Lead-quality tier — computed from the timeline answer only, never shown to the visitor
+function computeLeadIntentTier(timelineValue){
+  if(['asap','30','60'].includes(timelineValue)) return 'high';
+  if(['90','3-6'].includes(timelineValue)) return 'medium';
+  if(['6+','exploring'].includes(timelineValue)) return 'long_term';
+  return '';
+}
+
+// Simple client-side required-field check with per-field messages
+// (native HTML5 validation still runs first via the required/pattern attributes)
+const fieldErrorMessages = {
+  name: 'Please enter your first and last name.',
+  phone: 'Please enter a phone number with at least 10 digits.',
+  email: 'Please enter a valid email address.',
+  timeline: 'Please choose your approximate buying timeframe.'
+};
+
+function validateForm(){
+  let firstInvalid = null;
+
+  buyerForm.querySelectorAll('[required]').forEach(field=>{
+    let valid;
+    if(field.type === 'radio'){
+      valid = buyerForm.querySelectorAll('input[name="' + field.name + '"]:checked').length > 0;
+    } else {
+      valid = field.value.trim() !== '' && field.checkValidity();
+    }
+
+    const isRadioGroup = field.type === 'radio';
+    const errorTarget = isRadioGroup ? document.getElementById(field.name + '-error') : document.getElementById(field.id + '-error');
+
+    if(!isRadioGroup) field.setAttribute('aria-invalid', valid ? 'false' : 'true');
+    field.classList.toggle('field-error', !valid);
+
+    if(errorTarget){
+      if(!valid){
+        errorTarget.textContent = fieldErrorMessages[isRadioGroup ? field.name : field.id] || 'This field is required.';
+        errorTarget.classList.add('show');
+      } else {
+        errorTarget.classList.remove('show');
+        errorTarget.textContent = '';
+      }
+    }
+
+    if(!valid && !firstInvalid) firstInvalid = isRadioGroup ? document.querySelector('input[name="' + field.name + '"]') : field;
+  });
+
+  return firstInvalid;
+}
+
+// form_submitted — POST to the CRM webhook; only show the thank-you state on success
+buyerForm.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  // Honeypot check — if this hidden field has any value, a bot filled it. Abort quietly.
+  const honeypot = document.getElementById('hp_confirm');
+  if(honeypot && honeypot.value.trim() !== ''){
+    console.warn('Honeypot triggered — submission ignored.');
+    return;
+  }
+
+  const firstInvalid = validateForm();
+  if(firstInvalid){
+    firstInvalid.scrollIntoView({behavior:'smooth', block:'center'});
+    if(typeof firstInvalid.focus === 'function') firstInvalid.focus();
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(buyerForm).entries());
+  delete data.hp_confirm; // never send the honeypot value onward
+  data.lead_intent_tier = computeLeadIntentTier(data.timeline || '');
+  document.getElementById('lead_intent_tier').value = data.lead_intent_tier;
+
+  // If "Other" was chosen for area, surface the custom text as the readable area value too
+  if(data.area === 'Other' && data.area_other){
+    data.area_display = data.area_other;
+  } else {
+    data.area_display = data.area || '';
+  }
+
+  const submitBtn = document.getElementById('submitBtn');
+  const errorBanner = document.getElementById('formErrorBanner');
+  errorBanner.classList.remove('show');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  // ============================================================
+  // Make.com webhook — receives all fields in `data` (including the
+  // hidden UTM/gclid/lead_intent_tier/area_other fields) as JSON, then
+  // routes into Follow Up Boss per the configured scenario.
+  // ============================================================
+  fetch('https://hook.us2.make.com/jycxg19j8hx1umsn7kb8ik6tpk1aj9li', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  })
+  .then(response=>{
+    if(!response.ok) throw new Error('Webhook responded with ' + response.status);
+
+    pushEvent('form_submitted', {
+      timeline: data.timeline || '',
+      property_type: data.type || '',
+      area: data.area_display,
+      lead_intent_tier: data.lead_intent_tier,
+      utm_campaign: data.utm_campaign || '',
+      utm_term: data.utm_term || ''
+    });
+    // TODO: fire the Google Ads conversion tag here, e.g.:
+    // gtag('event', 'conversion', {'send_to': '[INSERT GOOGLE ADS CONVERSION ID]/[INSERT GOOGLE ADS CONVERSION LABEL]'});
+
+    buyerForm.style.display = 'none';
+    document.getElementById('formSideNote').style.display = 'none';
+    document.getElementById('thankYouPanel').style.display = 'block';
+    document.getElementById('thankYouPanel').setAttribute('tabindex', '-1');
+    document.getElementById('thankYouPanel').focus();
+  })
+  .catch(err=>{
+    console.error('Form submission failed:', err);
+    errorBanner.classList.add('show');
+    errorBanner.setAttribute('tabindex', '-1');
+    errorBanner.focus();
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Let's Build Your Home Search Plan";
+    // Form fields are left exactly as the visitor entered them — nothing is cleared.
+  });
+});
+
+// phone_call_click — tracks every tel: link on the page
+document.querySelectorAll('a[href^="tel:"]').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    const container = link.closest('section, header, .mobile-bar, #thankYouPanel');
+    pushEvent('phone_call_click', {location: container ? (container.id || container.className) : 'unknown'});
+  });
+});
+
+// consultation_booked — TODO: once a real scheduler (Calendly, etc.) is added, fire this
+// event from that tool's booking-confirmed callback, e.g.:
+// pushEvent('consultation_booked', {source: 'thank_you_page'});
+
+/* ============================================================
+   PLACEHOLDER SAFETY NET
+   If any [INSERT ...] placeholder ever reaches production unfilled, this
+   degrades it gracefully instead of showing broken bracket text to a real
+   visitor — a half-finished-looking trust section is worse than a shorter,
+   clean one. This does NOT excuse leaving these unfilled before launch.
+   ============================================================ */
+function isPlaceholder(text){
+  return typeof text === 'string' && text.trim().startsWith('[INSERT');
+}
+
+(function sanitizePlaceholders(){
+  // Headshot → real photo is in place (headshot.jpg). Fallback to initials
+  // monogram only if the image element is missing or fails to load.
+  const photo = document.getElementById('agentPhoto');
+  if(photo){
+    const img = photo.querySelector('img');
+    if(!img){
+      photo.textContent = 'ST';
+      photo.classList.add('photo-monogram');
+    } else {
+      img.addEventListener('error', function(){
+        photo.textContent = 'ST';
+        photo.classList.add('photo-monogram');
+      });
+    }
+  }
+
+  // NOTE: "NY License #10401373295" is hard-coded directly in the HTML for both
+  // the trust section and the footer — it is real, verified information, not a
+  // placeholder, so it is never processed by this function and can never be
+  // hidden by placeholder-detection logic.
+
+  // Google Business Profile link — only rendered if CONFIG.GOOGLE_BUSINESS_PROFILE_URL
+  // is a real URL. Otherwise these wrappers stay empty; no placeholder text, no dead link.
+  if(CONFIG.GOOGLE_BUSINESS_PROFILE_URL){
+    const gbpHtml = ' · <a href="' + CONFIG.GOOGLE_BUSINESS_PROFILE_URL + '" target="_blank" rel="noopener noreferrer">View Saad Tai on Google</a>';
+    const trustWrap = document.getElementById('gbpLinkWrap');
+    const footerWrap = document.getElementById('gbpLinkWrapFooter');
+    if(trustWrap) trustWrap.innerHTML = gbpHtml;
+    if(footerWrap) footerWrap.innerHTML = gbpHtml;
+  }
+})();
+
+/* ============================================================
+   OPTIONAL — Google Places Autocomplete on the "Other" location fields.
+
+   Only activates if CONFIG.GOOGLE_MAPS_API_KEY is set. The plain text fields
+   above work correctly on their own with no key at all; this only enhances
+   them. If the script fails to load, is blocked, or errors, the fields
+   silently remain plain text inputs — never alert(), never broken.
+   ============================================================ */
+(function initPlacesAutocompleteIfConfigured(){
+  if(!CONFIG.GOOGLE_MAPS_API_KEY) return; // No key supplied — plain text fields are used as-is.
+
+  const script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(CONFIG.GOOGLE_MAPS_API_KEY) + '&libraries=places&loading=async&callback=__initWestchesterAutocomplete';
+  script.async = true;
+  script.onerror = function(){
+    console.warn('Google Places Autocomplete failed to load — falling back to plain text input.');
+  };
+
+  window.__initWestchesterAutocomplete = function(){
+    try {
+      // Bias results toward Westchester County, NY (~20 mile radius around White Plains).
+      const westchesterBounds = new google.maps.Circle({
+        center: {lat: 41.0340, lng: -73.7629},
+        radius: 32000
+      }).getBounds();
+
+      ['formCustomLocation'].forEach(function(fieldId){
+        const input = document.getElementById(fieldId);
+        if(!input) return;
+        const autocomplete = new google.maps.places.Autocomplete(input, {
+          types: ['(regions)'],
+          bounds: westchesterBounds,
+          componentRestrictions: {country: 'us'}
+        });
+        autocomplete.bindTo('bounds', {getBounds: function(){ return westchesterBounds; }});
+        // Manual typing always remains possible — this only offers suggestions.
+      });
+    } catch(err){
+      console.warn('Places Autocomplete initialization failed — plain text input remains available.', err);
+    }
+  };
+
+  document.head.appendChild(script);
+})();
+</script>
+
+</body>
+</html>
