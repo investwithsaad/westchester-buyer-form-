@@ -48,30 +48,36 @@
 }
 </script>
 
-<!-- ============================================================
-     TODO — ANALYTICS & CONVERSION TRACKING (required before launch)
-     Insert GA4 and Google Ads tags here, in this order, before </head>.
+<!-- Google tag (gtag.js) — Google Ads account AW-18071759659 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18071759659"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18071759659');
+</script>
 
-     1) GA4:
-     <script async src="https://www.googletagmanager.com/gtag/js?id=[INSERT GA4 MEASUREMENT ID]"></script>
+<!-- ============================================================
+     REMAINING TODO — GA4 measurement ID and the Google Ads conversion
+     LABEL are still needed:
+
+     1) GA4 (if you want GA4 alongside Google Ads — optional, separate
+        from the Ads tag above; a GA4 measurement ID looks like "G-XXXXXXX"):
      <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
        gtag('config', '[INSERT GA4 MEASUREMENT ID]');
      </script>
 
-     2) Google Ads (same gtag.js load can be shared if IDs match):
-     <script>
-       gtag('config', '[INSERT GOOGLE ADS CONVERSION ID]');
-     </script>
+     2) Conversion LABEL — go to Google Ads → Tools & Settings →
+        Conversions → click into your form-submission conversion action →
+        "Event snippet" tab. It'll show a `send_to` value that looks like
+        'AW-18071759659/AbC-D_efGhIjKlmNoP'. Everything after the slash is
+        the label this file still needs — it's used in the actual
+        conversion-firing call further down in this file's main <script>
+        block (search for "INSERT GOOGLE ADS CONVERSION LABEL").
 
-     3) Conversion firing (used later in this file's <script> block):
-     gtag('event', 'conversion', {
-       'send_to': '[INSERT GOOGLE ADS CONVERSION ID]/[INSERT GOOGLE ADS CONVERSION LABEL]'
-     });
-
-     Until these are inserted, pushEvent() below only logs to the console.
+     Until the label is inserted, form submissions still fire pushEvent()
+     as a dataLayer/console event, but the Ads-specific conversion event
+     itself won't fire yet.
      ============================================================ -->
 
 <style>
@@ -787,8 +793,9 @@ const CONFIG = {
 /* ============================================================
    TRACKING STUB — replace pushEvent() body with real GA4 / Google Ads calls.
    e.g. gtag('event', name, params);  or  dataLayer.push({event:name, ...params});
-   TODO: Insert GA4 tag and Google Ads conversion tag in <head> before relying on this
-   (see the TODO block at the top of <head> for the exact snippets).
+   The Google Ads tag (AW-18071759659) is installed in <head>, so these now
+   fire as real gtag events, visible in Google Ads' and GA4's event reports
+   (if a GA4 measurement ID is added alongside it — see the <head> TODO).
 
    SECONDARY ENGAGEMENT events (not the business conversion):
      form_started
@@ -798,9 +805,8 @@ const CONFIG = {
    ============================================================ */
 function pushEvent(name, params){
   params = params || {};
-  console.log('[tracking]', name, params); // TODO: replace with real gtag/dataLayer call
-  // Example once GA4 is installed:
-  // if (typeof gtag === 'function') gtag('event', name, params);
+  console.log('[tracking]', name, params);
+  if (typeof gtag === 'function') gtag('event', name, params);
 }
 
 /* Populate hidden attribution fields from the URL's query string */
@@ -969,8 +975,9 @@ buyerForm.addEventListener('submit', function(e){
       utm_campaign: data.utm_campaign || '',
       utm_term: data.utm_term || ''
     });
-    // TODO: fire the Google Ads conversion tag here, e.g.:
-    // gtag('event', 'conversion', {'send_to': '[INSERT GOOGLE ADS CONVERSION ID]/[INSERT GOOGLE ADS CONVERSION LABEL]'});
+    // TODO: fire the Google Ads conversion tag once you have the conversion
+    // LABEL (see the <head> TODO block for exactly where to find it):
+    // gtag('event', 'conversion', {'send_to': 'AW-18071759659/[INSERT GOOGLE ADS CONVERSION LABEL]'});
 
     buyerForm.style.display = 'none';
     document.getElementById('formSideNote').style.display = 'none';
